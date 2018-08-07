@@ -15,7 +15,7 @@ add_library(guislice external/guislice/src/GUIslice.c
             external/guislice/src/GUIslice_drv_sdl.c)
 target_include_directories(guislice PUBLIC "external/guislice/src/")
 
-if (USE_SDL1_DRV)
+IF(USE_SDL1_DRV)
     target_link_libraries(guislice PUBLIC ${SDL_LIBRARY})
     target_link_libraries(guislice PUBLIC ${SDL_TTF_LIBRARIES})
     target_include_directories(guislice PUBLIC ${SDL_INCLUDE_DIR})
